@@ -6,20 +6,22 @@ const Nav = () => {
     return (
         <div className="m-3">
         <ul className="nav nav-pills justify-content-center">
-            <li className="nav-item">
+            <li >
             <NavLink 
+                className={({ isActive }) => isActive ? "green" : "blue"}
                 to=""
-                className='nav-link'
-                exact
-                activeClassName="active"
+                // className='nav-link'
+                // exact
+                // activeClassName="active"
             >
               Routine tasks     
           </NavLink>
             </li>
-            <li className="nav-item">
+            <li >
             <NavLink 
-                to="about" 
-                className='nav-link'
+                className={({ isActive }) => isActive ? "green" : "blue"}
+                to="about"
+                // className='nav-link'
             >
               About creator
           </NavLink>
